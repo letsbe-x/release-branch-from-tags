@@ -7,6 +7,8 @@ on:
 jobs:
   create_release_branch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: github.event.release.tag_name != 'latest'
     steps:
       - name: Checkout code
